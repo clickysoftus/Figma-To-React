@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   createStackNavigator,
@@ -8,6 +7,7 @@ import {
 
 //Login Screens
 import Login from '../src/Screens/Auth/login';
+import Otp from '../src/Screens/Auth/otp';
 
 const Stack = createStackNavigator();
 
@@ -27,22 +27,19 @@ const Auth = ({navigation}) => {
         options={{headerShown: false}}
         component={Login}
       />
-      
+      <Stack.Screen name="Otp" options={{headerShown: false}} component={Otp} />
     </Stack.Navigator>
   );
 };
 
 const routes = props => {
- 
   return (
     <>
       <NavigationContainer>
-     
-          <Auth />
-       
+        <Auth />
       </NavigationContainer>
     </>
   );
 };
 
-export default (routes);
+export default routes;
