@@ -17,9 +17,9 @@ import {bold, medium} from '../../utiles/fontFamily';
 import {font4} from '../../utiles/fontSize';
 const LoginScreen = () => {
   const navigation = useNavigation();
-  const [type, setType] = useState('Email');
-  const [number, setNumber] = useState('');
-  const [email, setEmail] = useState('');
+  const [type, setType] = useState<string>('Email');
+  const [number, setNumber] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
   return (
     <SafeAreaView style={styles.container}>
       <CustomHeader title1={'Home'} title2={'Page'} img={logo} />

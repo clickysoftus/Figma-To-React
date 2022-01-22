@@ -22,8 +22,8 @@ import CustomHeader from '../../Components/customeHeader';
 
 const CELL_COUNT = 6;
 const Otp = props => {
-  const [data, setdata] = useState(props?.route?.params?.data);
-  const [value, setValue] = useState('');
+  const [data, setdata] = useState<any>(props?.route?.params?.data);
+  const [value, setValue] = useState<string>('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [propsOtp, getCellOnLayoutHandler] = useClearByFocusCell({
     value,
